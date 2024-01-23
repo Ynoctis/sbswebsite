@@ -1,8 +1,8 @@
 import React from 'react'
-import UserRegistrationForm from '../components/UserRegistrationForm';
 import Header from '../components/Header';
-import LoggedHeader from '../components/LoggedHeader'
-import Footer from '../components/Footer';
+import LoggedHeader from '../components/LoggedHeader';
+import NonMemberList from '../components/NonMemberList';
+import JsonToCsvNM from '../components/jsonToCsv';
 
 const Registration = () => {
 
@@ -11,8 +11,8 @@ const Registration = () => {
     return (
         <div>
             {hasAccessToken ? <LoggedHeader /> : <Header />}
-            <UserRegistrationForm/>
-            <Footer/>
+            <NonMemberList/>
+            <JsonToCsvNM/>
         </div>
     );
 };

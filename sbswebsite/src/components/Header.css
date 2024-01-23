@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: red; /* Adjust the background color as needed */
+    color: white; /* Adjust the text color as needed */
+  }
+  
+  .main-title {
+    flex-grow: 1;
+  }
+  
+  .right-section {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .register,
+  .admin-login {
+    font-size: 14px; /* Adjust the font size as needed */
+  }

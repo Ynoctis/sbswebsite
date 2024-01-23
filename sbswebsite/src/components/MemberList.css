@@ -1,0 +1,22 @@
+/* YourComponent.css */
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .full-width-row td {
+    width: 100%;
+    background-color: #f0f0f0; /* Optional background color for illustration */
+  }
+  
+  td {
+    border: 1px solid #ccc; /* Optional border style for illustration */
+    padding: 10px; /* Optional padding for illustration */
+  }
+  

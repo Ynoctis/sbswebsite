@@ -1,20 +1,17 @@
 import React from 'react'
-import UserRegistrationForm from '../components/UserRegistrationForm';
 import Header from '../components/Header';
 import LoggedHeader from '../components/LoggedHeader'
-import Footer from '../components/Footer';
 
-const Registration = () => {
+const PhotosPage = () => {
 
     const hasAccessToken = !!localStorage.getItem('access_token');
 
     return (
         <div>
             {hasAccessToken ? <LoggedHeader /> : <Header />}
-            <UserRegistrationForm/>
-            <Footer/>
+            <h2>Under Construction</h2>
         </div>
     );
 };
 
-export default Registration
+export default PhotosPage
