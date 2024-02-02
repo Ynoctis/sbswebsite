@@ -2,13 +2,6 @@ import React from 'react';
 import Image from '../images/sbsLogo.jpg'
 
 const Footer = () => {
-  const footerStyle = {
-    backgroundColor: 'white',
-    padding: '20px',
-    alignItems: 'center',
-    margin: 'auto',
-    display: 'flex',
-  };
 
   const textStyle = {
     // Add any additional styling for the text (if needed)

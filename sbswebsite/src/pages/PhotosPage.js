@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from '../components/Header';
 import LoggedHeader from '../components/LoggedHeader'
+import Footer from '../components/Footer'
+import PhotoComponent from '../components/PhotoComponent'
 
 const PhotosPage = () => {
 
@@ -9,7 +11,8 @@ const PhotosPage = () => {
     return (
         <div>
             {hasAccessToken ? <LoggedHeader /> : <Header />}
-            <h2>Under Construction</h2>
+            <PhotoComponent />
+            <Footer />
         </div>
     );
 };
