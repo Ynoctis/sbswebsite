@@ -9,7 +9,7 @@ const HistoryComponent = () => {
 
     return (
         <div style={{ height: '60vh'}}>
-            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column',}}>
                 <div style={{ textAlign: 'center' }}>
                     <h1>Sunnybrook Soccer league</h1>
                 </div>
