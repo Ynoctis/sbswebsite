@@ -405,9 +405,14 @@ e)  to release the League to share my contact information with other team member
           </Col>
         </Row>
 
-        <button type="button" className="btn btn-primary" onClick={openGoogleForm}>
-          Photo Upload
-        </button>
+        <div>
+          <button type="button" className="btn btn-primary" onClick={openGoogleForm}>
+            Photo Upload
+          </button>
+          <div style={{ fontWeight: 'bold'}}>
+            NOTE: SUBMIT PHOTO, then RETURN TO COMPLETE and SUBMIT this form
+          </div>
+        </div>
 
         <Form.Group controlId="disclaimer">
           <Form.Label style={{ fontWeight: 'bold', textDecoration: 'underline' }}>Disclaimer</Form.Label>
