@@ -22,6 +22,10 @@ const Header = () => {
     navigate("/photos");
   }
 
+  const handleHistory = () => {
+    navigate("/history");
+  }
+
   const handleLocation = () => {
     navigate("/location");
   }
@@ -37,6 +41,7 @@ const Header = () => {
         <button className="btn" style={buttonStyle} onClick={handleMainPage} type="button"><h2>Sunnybrook Soccer - Over 35 League (goalies over 18)</h2></button>
         <button className='btn' style={buttonStyle} onClick={handleResgiter} type="button">Register</button>
         <button className='btn' style={buttonStyle} onClick={handlePhotos} type="button">Photos</button>
+        <button className='btn' style={buttonStyle} onClick={handleHistory} type="button">History</button>
         <button className='btn' style={buttonStyle} onClick={handleLocation} type="button">Location</button>
       </div>
       <div className="right-section">

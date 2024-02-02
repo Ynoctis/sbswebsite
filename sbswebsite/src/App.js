@@ -8,6 +8,7 @@ import NonMemberPage from './pages/NonMemberPage';
 import HomePage from './pages/HomePage';
 import PhotosPage from './pages/PhotosPage';
 import LocationPage from './pages/LocationPage';
+import HistoryPage from './pages/HistoryPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/nonmember' element={<NonMemberPage/>}></Route>
         <Route path='/register' element={<Registration/>}></Route>
         <Route path='/photos' element={<PhotosPage/>}></Route>
+        <Route path='/history' element={<HistoryPage/>}></Route>
         <Route path='/location' element={<LocationPage/>}></Route>
       </Routes>
     </BrowserRouter>

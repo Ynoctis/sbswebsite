@@ -1,21 +1,20 @@
 import React from 'react'
 import Header from '../components/Header';
-import HomeComponent from '../components/HomeComponent';
-import LoggedHeader from '../components/LoggedHeader';
+import LoggedHeader from '../components/LoggedHeader'
+import HistoryComponent from '../components/HistoryComponent';
 import Footer from '../components/Footer';
 
-
-const HomePage = () => {
+const HistoryPage = () => {
 
     const hasAccessToken = !!localStorage.getItem('access_token');
 
     return (
         <div>
             {hasAccessToken ? <LoggedHeader /> : <Header />}
-            <HomeComponent/>
-            <Footer />
+            <HistoryComponent/>
+            <Footer/>
         </div>
     );
 };
 
-export default HomePage
+export default HistoryPage
