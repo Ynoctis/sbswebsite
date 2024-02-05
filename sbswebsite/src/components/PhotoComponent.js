@@ -1,7 +1,8 @@
 import React from 'react';
 import Image1 from '../images/p1.jpg';
 import Image2 from '../images/p2.jpg';
-import Image3 from '../images/p3mobile.jpeg';
+import Image3 from '../images/p3.jpeg';
+import Image3M from '../images/p3mobile.jpeg';
 import Image4 from '../images/p4.JPG';
 import Image5 from '../images/p5.jpeg';
 import Image6 from '../images/p6.jpg';
@@ -145,7 +146,7 @@ const PhotoComponent = () => {
                     style={{ maxWidth: '100%', height: 'auto' }}
                 />
                 <img
-                    src={Image3}
+                    src={Image3M}
                     alt="p1"
                 />
                 <img
