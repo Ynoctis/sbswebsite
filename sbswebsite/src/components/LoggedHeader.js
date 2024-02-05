@@ -51,9 +51,10 @@ const Header = () => {
                 <button className='btn' style={buttonStyle} onClick={handlePhotos} type="button">Photos</button>
                 <button className='btn' style={buttonStyle} onClick={handleHistory} type="button">History</button>
                 <button className='btn' style={buttonStyle} onClick={handleLocation} type="button">Location</button>
-
+                <button className="btn main-hidden" onClick={handleNavMem} style={buttonStyle} type="button">User List</button>
+                <button className="btn main-hidden" onClick={handleClick} style={buttonStyle} type="button">Log Out</button>
             </div>
-            <div className="right-section">
+            <div className="right-section hidden">
                 {/* <button className="btn" onClick={handleNonMem} style={buttonStyle} type="button">Non Member Page</button> */}
                 {/* <button className="btn" onClick={handleNavcsvtodoc} style={buttonStyle} type="button">Photo Converter</button> */}
                 <button className="btn" onClick={handleNavMem} style={buttonStyle} type="button">User List</button>

@@ -8,7 +8,7 @@
   }
   
   .main-title {
-    flex-grow: 1;
+    flex: 1;
   }
   
   .right-section {
@@ -20,3 +20,42 @@
   .admin-login {
     font-size: 14px; /* Adjust the font size as needed */
   }
+
+  /* Default styles for larger screens */
+.main-title h2 {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.main-hidden {
+  display: none;
+}
+
+/* Media query for smaller screens (adjust the max-width as needed) */
+@media screen and (max-width: 600px) {
+  .main-title h2 {
+    font-size: 20px; /* Adjust the font size for smaller screens */
+  }
+
+  .main-title {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mobile-header {
+    align-items: 'center';
+  }
+
+  .right-section {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .main-hidden {
+    display: inline-block;
+  }
+}

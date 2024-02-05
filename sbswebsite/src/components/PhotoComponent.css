@@ -1,0 +1,22 @@
+.overflowHidden {
+    overflow: hidden;
+}
+
+.hideInDesktop {
+    display: none
+}
+
+.positionRelative {
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .hideInMobile {
+        display: none;
+    }
+
+    .hideInDesktop {
+        display: block
+    }
+
+}

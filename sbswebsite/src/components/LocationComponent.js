@@ -1,6 +1,7 @@
 import React from "react";
 import Image1 from "../images/p16.png"
 import Image2 from "../images/sbParkGoogle.png"
+import './LocationComponent.css';
 
 const LocationComponent = () => {
 
@@ -11,7 +12,7 @@ const LocationComponent = () => {
 
     return (
         <div>
-            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column',}}>
+            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column', }}>
                 <div style={{ textAlign: 'center' }}>
                     <h1>Sunnybrook Soccer league</h1>
                 </div>
@@ -22,34 +23,66 @@ const LocationComponent = () => {
                     <h2>(Formerly St. Andrew Soccer Club)</h2>
                 </div>
             </div>
-            <div style={{ paddingTop: '2vh', paddingLeft: '1vh', paddingBottom: '2vh' }}>
-                <h2 style={{ textDecoration: 'underline' }}>Location</h2>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-                <div style={{ width: '50%', textAlign: 'center' }}>
-                    <h3>Entrance of the park is just north of Leslie and Eglington East. Follow road through part to sports fields.</h3>
-                    <h4>
-                        Google maps link: <span onClick={openParkAddress} style={{ textDecoration: 'underline', fontWeight: 'bold', color: 'blue', cursor: 'pointer' }}>Click Here</span>
-                    </h4>
+            <div className="hideInMobile">
+                <div style={{ paddingTop: '2vh', paddingLeft: '1vh', paddingBottom: '2vh' }}>
+                    <h2 style={{ textDecoration: 'underline' }}>Location</h2>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                    <div style={{ width: '50%', textAlign: 'center' }}>
+                        <h3>Entrance of the park is just north of Leslie and Eglington East. Follow road through part to sports fields.</h3>
+                        <h4>
+                            Google maps link: <span onClick={openParkAddress} style={{ textDecoration: 'underline', fontWeight: 'bold', color: 'blue', cursor: 'pointer' }}>Click Here</span>
+                        </h4>
 
+                    </div>
+                    <div style={{ width: '50%', textAlign: 'center' }}>
+                        <h3>
+                            Sunnybrook park uses two or the three pitches. Our schedule uses EAST and WEST to describe which pitch to go to. (The City sometimes changes pitches mid-season). This way the most westerly pitch is always WEST on the schedule and the easterly one EAST.
+                        </h3>
+                    </div>
                 </div>
-                <div style={{ width: '50%', textAlign: 'center' }}>
-                    <h3>
-                        Sunnybrook park uses two or the three pitches. Our schedule uses EAST and WEST to describe which pitch to go to. (The City sometimes changes pitches mid-season). This way the most westerly pitch is always WEST on the schedule and the easterly one EAST.
-                    </h3>
+                <div style={{ display: 'flex', }}>
+                    <img
+                        src={Image2}
+                        alt="p15"
+                        style={{ flex: 1, objectFit: 'contain' }}
+                    />
+                    <img
+                        src={Image1}
+                        alt="p16"
+                        style={{ flex: 1, objectFit: 'contain' }}
+                    />
                 </div>
             </div>
-            <div style={{ display: 'flex', }}>
-                <img
-                    src={Image2}
-                    alt="p15"
-                    style={{ flex: 1, objectFit: 'contain' }}
-                />
-                <img
-                    src={Image1}
-                    alt="p16"
-                    style={{ flex: 1, objectFit: 'contain' }}
-                />
+            <div className="hideInDesktop">
+                <div>
+                    <h2 style={{ textDecoration: 'underline', textAlign: 'center' }}>Location</h2>
+                </div>
+                <div>
+                    <div style={{ textAlign: 'center' }}>
+                        <h3>Entrance of the park is just north of Leslie and Eglington East. Follow road through part to sports fields.</h3>
+                        <h4>
+                            Google maps link: <span onClick={openParkAddress} style={{ textDecoration: 'underline', fontWeight: 'bold', color: 'blue', cursor: 'pointer' }}>Click Here</span>
+                        </h4>
+                        <img
+                            src={Image2}
+                            alt="p15"
+                            style={{ maxWidth: '100%' }}
+                        />
+                    </div>
+                    <div>
+                        <div style={{ textAlign: 'center' }}>
+                            <h3>
+                                Sunnybrook park uses two or the three pitches. Our schedule uses EAST and WEST to describe which pitch to go to. (The City sometimes changes pitches mid-season). This way the most westerly pitch is always WEST on the schedule and the easterly one EAST.
+                            </h3>
+                        </div>
+                        <img
+                            src={Image1}
+                            alt="p16"
+                            style={{ maxWidth: '100%' }}
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );

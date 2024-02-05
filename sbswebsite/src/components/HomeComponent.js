@@ -1,20 +1,22 @@
 import React from 'react';
-import Image from '../images/sbsPark.jpg'
+import Image from '../images/sbsPark.jpg';
+import Image2 from '../images/p17.jpg';
 
 const HomeComponent = () => {
 
     const containerStyle = {
-        maxWidth: '100%', // Set the maximum width of the container
-        margin: '0 auto', // Center the container if needed
+        maxWidth: '100vw', // Set the maximum width of the container
+        // margin: '0 auto', // Center the container if needed
         display: 'flex',  // Use flexbox for centering
-        alignItems: 'center', // Center vertically
+        // alignItems: 'center', // Center vertically
+        justifyContent: 'space-evenly',
     };
 
     const imageStyle = {
-        maxWidth: '100%', // Set the maximum width of the image
+        // maxWidth: '100%', // Set the maximum width of the image
         height: 'auto',   // Maintain the aspect ratio of the image
-        width: '50%',
-        margin: '0 auto', // Center the image horizontally
+        width: '45%',
+        // margin: '0 auto', // Center the image horizontally
     };
 
     const openParkAddress = () => {
@@ -24,7 +26,7 @@ const HomeComponent = () => {
 
     return (
         <div>
-            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column', paddingBottom: 10 }}>
                 <div style={{ textAlign: 'center' }}>
                     <h1>Sunnybrook Soccer league</h1>
                 </div>
@@ -41,6 +43,11 @@ const HomeComponent = () => {
                 <img
                     src={Image}
                     alt="sbsPark"
+                    style={imageStyle}
+                />
+                <img
+                    src={Image2}
+                    alt="sbsTrophy"
                     style={imageStyle}
                 />
             </div>

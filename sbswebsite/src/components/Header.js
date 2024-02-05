@@ -43,6 +43,7 @@ const Header = () => {
         <button className='btn' style={buttonStyle} onClick={handlePhotos} type="button">Photos</button>
         <button className='btn' style={buttonStyle} onClick={handleHistory} type="button">History</button>
         <button className='btn' style={buttonStyle} onClick={handleLocation} type="button">Location</button>
+        <button className='btn main-hidden' style={buttonStyle} onClick={handleClick} type="button">Admin Login</button>
       </div>
       <div className="right-section">
         {/* <span className="register">Register</span> */}

@@ -21,7 +21,7 @@ const Footer = () => {
   };
 
   return (
-    <div style={{backgroundColor: 'white', padding: '20px', alignItems: 'center', margin: 'auto', display: 'flex', justifyContent: 'center', bottom: 0,}}>
+    <div style={{backgroundColor: 'white', padding: '20px', alignItems: 'center', margin: 'auto', display: 'flex', justifyContent: 'center',}}>
       <img
         src={Image}
         alt="sbsLogo"
