@@ -148,6 +148,7 @@ const PhotoComponent = () => {
                 <img
                     src={Image3M}
                     alt="p1"
+                    style={{ maxWidth: '100%', height: 'auto' }}
                 />
                 <img
                     src={Image4}
