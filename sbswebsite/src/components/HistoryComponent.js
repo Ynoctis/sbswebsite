@@ -8,7 +8,7 @@ const HistoryComponent = () => {
     }
 
     return (
-        <div style={{ borderWidth: 2, border: 'solid', borderColor: 'red' }}>
+        <div>
             <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column',}}>
                 <div style={{ textAlign: 'center' }}>
                     <h1>Sunnybrook Soccer league</h1>
