@@ -430,7 +430,7 @@ This agreement shall be governed by and construed in accordance with the laws of
         </div>
 
         <Form.Group controlId="disclaimer">
-          <Form.Label style={{ fontWeight: 'bold', textDecoration: 'underline' }}>Waiver & Release</Form.Label>
+          <Form.Label style={{ fontWeight: 'bold', textDecoration: 'underline' }}>Waiver</Form.Label>
           <Form.Control
             as="textarea"
             rows={5}  // Specify the number of rows
