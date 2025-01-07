@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Container, Button } from 'react-bootstrap';
 import CodeOfConductModal from './CodeOfConductModal';
+import { useNavigate } from "react-router-dom";
 
 const UserRegistrationForm = () => {
+
+  const navigate = useNavigate();
+  const handleSubmissionSuccess = () => {
+    navigate("/submissionsuccess");
+  }
+
 
   const [showModal, setShowModal] = useState(false);
 
@@ -131,9 +138,9 @@ const UserRegistrationForm = () => {
     try {
       const formDataNew = new FormData();
 
-      const futureDate = '2024-05-14';
+      // const futureDate = '2024-05-14';
       const birthDate = new Date(formData.date_of_birth)
-      const futureDateObj = new Date(futureDate)
+      const futureDateObj = new Date()
       let age = futureDateObj.getFullYear() - birthDate.getFullYear()
       if (
         futureDateObj.getMonth() < birthDate.getMonth() ||
@@ -170,12 +177,16 @@ const UserRegistrationForm = () => {
 
       if (response.ok) {
         // console.log('Form submitted successfully!');
-        if (formData.previously_played === 'No') {
-          window.alert('Thank you for your interest in our league, should your application be successful, and we have room for new players we will be in contact with you regarding payment of player fees - $200.')
-        }
+        // if (formData.previously_played === 'No') {
+        //   window.alert('Thank you for your interest in our league, should your application be successful, and we have room for new players we will be in contact with you regarding payment of player fees - $230.')
+        // }
+        // window.alert('Form submitted successfully!');
+        handleSubmissionSuccess();
         // Optionally reset the form data to initial values
         setFormData(initialFormData);
-        window.alert('Form submitted successfully!');
+
+
+
       } else {
         console.error('Form submission failed:', response.statusText);
       }
@@ -189,9 +200,13 @@ const UserRegistrationForm = () => {
   const agreementText = `In consideration of the League allowing me to participate, I agree:
 a)  to assume all risks arising out of, associated with or related to my participation;
 b)  to be solely responsible for any injury, loss or damage that I might sustain while participating; and
-c)  to release the League from liability for any and all claims, demands, actions and costs that might arise out of my participation.
-d)  to release the League from any reimbursement of fees or costs due to injury, suspension or any other reason resulting in an inability to complete the season.
-e)  to release the League to share my contact information with other team members.`;
+c)  to release the League, its representatives, officers, agents, and any member of its executive from liability for any and all claims, demands, actions and costs that might arise out of my participation.
+d)  to release the League, its representatives, officers, agents, and any member of its executive from any reimbursement of fees or costs due to injury, suspension or any other reason resulting in an inability to complete the season.
+e)  to release the League, its representatives, officers, agents, and any member of its executive to share my contact information with other team members.
+
+I further agree not to make any claim against the League, its officers, representatives, agents, or executive members for any loss, injury, or damage arising from participation, and I waive my right to sue for any such claims, including those arising from negligence.
+
+This agreement shall be governed by and construed in accordance with the laws of the Province of Ontario and I understand and agree that this waiver is intended to be as broad and inclusive as permitted by the laws of Ontario, and that if any portion is held invalid, the remainder will continue to have full legal force and effect`;
 
 
   const openGoogleForm = () => {
@@ -231,7 +246,7 @@ e)  to release the League to share my contact information with other team member
         {formData.previously_played === 'No' && (
           <div>
             <h2>New Player Information:</h2>
-            <h4>Thank you for your application to Sunnybrook Soccer League. We play every Sunday morning at <span style={{ textDecoration: 'underline', color: 'blue', cursor: 'pointer' }} onClick={openSunnyPark}>Sunnybrook Park Sports Fields</span> from early May to late September with playoffs starting in August. We are a social club and players play on different teams each year so that eventually you will get to know most of the other players in the league. <span style={{ textDecoration: 'underline' }}>Please continue to apply for registration and you will be contacted for payment if your application is accepted into the league.</span> Note that if you are accepted, as a new player, you will not be immediately placed on a team but will be asked to play on a few different teams for the first few weeks so that the executive can decide which team to place you on. We do this to balance the teams in the league. NOTE this is an over 35 league but we accept goalies over 18 years old to the league. This is a social league, the average age is 50 with many players having played in the League for over 15 years. The player fee for 2024 will be $200.</h4>
+            <h4>Thank you for your application to Sunnybrook Soccer League. We play every Sunday morning at <span style={{ textDecoration: 'underline', color: 'blue', cursor: 'pointer' }} onClick={openSunnyPark}>Sunnybrook Park Sports Fields</span> from early May to late September with playoffs starting in August. We are a social club and players play on different teams each year so that eventually you will get to know most of the other players in the league. <span style={{ textDecoration: 'underline' }}>Please continue to apply for registration and you will be contacted for payment if your application is accepted into the league.</span> Note that if you are accepted, as a new player, you will not be immediately placed on a team but will be asked to play on a few different teams for the first few weeks so that the executive can decide which team to place you on. We do this to balance the teams in the league. NOTE this is an over 35 league but we accept goalies over 18 years old to the league. This is a social league, the average age is 50 with many players having played in the League for over 15 years. The player fee for 2025 will be $230.</h4>
 
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="By clicking this checkbox - I agree and understand the above" required />
@@ -415,12 +430,12 @@ e)  to release the League to share my contact information with other team member
         </div>
 
         <Form.Group controlId="disclaimer">
-          <Form.Label style={{ fontWeight: 'bold', textDecoration: 'underline' }}>Disclaimer</Form.Label>
+          <Form.Label style={{ fontWeight: 'bold', textDecoration: 'underline' }}>Waiver & Release</Form.Label>
           <Form.Control
             as="textarea"
-            rows={8}  // Specify the number of rows
+            rows={5}  // Specify the number of rows
             disabled  // Set the disabled prop to make it disabled
-            defaultValue={"The player/participant hereby agrees to release and forever discharge Sunnybrook Soccer League/St Andrew SC (the “League”), its representatives, officers, agents, of and from any actions, causes of actions, claims and demands whatsoever arising out of and in relation to the player’s participation in all activities of the League (including pre and post-game activities) and further agrees to indemnify and hold harmless the League, its representatives, officers, agents for any damages, costs, claims and demands that the said League, its representatives, officers, agents may suffer and incur as a result of  the on-field and off-field conduct of the player/participant. The player/participant hereby agrees to release and forever discharge Sunnybrook Soccer League/St Andrew SC (the “League”), its representatives, officers, agents, of and from any actions, causes of actions, claims and demands whatsoever arising out of and in relation to the player’s participation in all activities of the League (including pre and post-game activities) and further agrees to indemnify and hold harmless the League, its representatives, officers, agents for any damages, costs, claims and demands that the said League, its representatives, officers, agents may suffer and incur as a result of the on-field and off-field conduct of the player/participant. "}
+            defaultValue={"The player/participant hereby agrees to release and forever discharge Sunnybrook Soccer League/St Andrew SC (the “League”), its representatives, officers, agents, and any member of its executive of and from any actions, causes of actions, claims and demands whatsoever arising out of and in relation to the player’s participation in all activities and gatherings of the League (including pre and post-game activities) and further agrees to indemnify and hold harmless the League, its representatives, officers, agents and any member of its executive for any damages, costs, claims and demands that the said League, its representatives, officers, agents and any member of its executive may suffer and incur as a result of the on-field and off-field conduct of the player/participant. "}
             style={{ fontStyle: 'italic' }}
           />
         </Form.Group>
@@ -429,7 +444,7 @@ e)  to release the League to share my contact information with other team member
           <Form.Label style={{ fontWeight: 'bold', textDecoration: 'underline' }}>Release of Liability</Form.Label>
           <Form.Control
             as="textarea"
-            rows={6}  // Specify the number of rows
+            rows={14}  // Specify the number of rows
             disabled  // Set the disabled prop to make it disabled
             defaultValue={agreementText}
             style={{ fontStyle: 'italic' }}
@@ -458,8 +473,8 @@ e)  to release the League to share my contact information with other team member
         </Form.Group> */}
         {formData.previously_played === 'Yes' && (
           <div>
-            <h4>Once you have completed and submitted this form, please send your 2024 player fees of <span style={{ textDecoration: 'underline', fontWeight: 'bold' }}>$200 by e-transfer to sunnybrook.soccer@gmail.com</span> with your <span style={{ textDecoration: 'underline' }}>full name</span> in the comments field.</h4>
-            <h3 style={{ textDecoration: 'underline', fontWeight: 'bold' }}>REGISTRATION FOR 2024 IS NOT COMPLETE AND YOU WILL NOT BE PUT ON A TEAM UNTIL WE HAVE RECEIVED YOUR PAYMENT</h3>
+            <h4>Once you have completed and submitted this form, please send your 2025 player fees of <span style={{ textDecoration: 'underline', fontWeight: 'bold' }}>$230 by e-transfer to sunnybrook.soccer@gmail.com</span> with your <span style={{ textDecoration: 'underline' }}>full name</span> in the comments field.</h4>
+            <h3 style={{ textDecoration: 'underline', fontWeight: 'bold' }}>REGISTRATION FOR 2025 IS NOT COMPLETE AND YOU WILL NOT BE PUT ON A TEAM UNTIL WE HAVE RECEIVED YOUR PAYMENT</h3>
           </div>
         )}
 

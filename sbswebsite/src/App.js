@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import PhotosPage from './pages/PhotosPage';
 import LocationPage from './pages/LocationPage';
 import HistoryPage from './pages/HistoryPage';
+import SubmissionSuccessPage from './pages/SubmissionSuccessPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/photos' element={<PhotosPage/>}></Route>
         <Route path='/history' element={<HistoryPage/>}></Route>
         <Route path='/location' element={<LocationPage/>}></Route>
+        <Route path='/submissionsuccess' element={<SubmissionSuccessPage/>}></Route>
       </Routes>
     </BrowserRouter>
       

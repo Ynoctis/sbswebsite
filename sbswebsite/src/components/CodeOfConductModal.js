@@ -11,7 +11,7 @@ const CodeOfConductModal = ({ showModal, handleClose }) => {
             <Modal.Body>
                 {/* Include your Code of Conduct document content here */}
                 <h1 style={{ textAlign: 'center' }}>SUNNYBROOK SOCCER LEAGUE</h1>
-                <h3 style={{ textAlign: 'center' }}>2023 PLAYER CODE OF CONDUCT</h3>
+                <h3 style={{ textAlign: 'center' }}>PLAYER CODE OF CONDUCT</h3>
                 <h6>A.	All players, including waiting and new list players, must pay in full before playing. No refunds will be issued.</h6>
                 <h6>B.	Players must obey team captains in matters of playing position, substitution, referee respect, and temporary transfers to opponent team in case of player shortages. Any player not following their captain&lsquo;s instructions will be reported to the executive and possibly have their membership cancelled without refund. </h6>
                 <h6>C.	Any player who exits the field during game time without the expressed approval of their captain(s) is subject to disciplinary action, including, but not limited to, one or more game suspensions. </h6>
