@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../images/sbsLogo.jpg'
+import Image from '../images/sbsLogo.webp'
 
 const Footer = () => {
 

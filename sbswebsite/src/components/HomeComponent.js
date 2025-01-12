@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from '../images/sbsPark.jpg';
-import Image2 from '../images/p17.jpg';
+import Image from '../images/sbsPark.webp';
+import Image2 from '../images/p17.webp';
 
 const HomeComponent = () => {
 

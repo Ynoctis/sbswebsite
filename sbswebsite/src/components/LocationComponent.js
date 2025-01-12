@@ -1,6 +1,6 @@
 import React from "react";
-import Image1 from "../images/p16.png"
-import Image2 from "../images/sbParkGoogle.png"
+import Image1 from "../images/p16.webp"
+import Image2 from "../images/sbParkGoogle.webp"
 import './LocationComponent.css';
 
 const LocationComponent = () => {
