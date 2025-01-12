@@ -9,7 +9,7 @@ const SubmissionSuccessComponent = () => {
 
     return (
         <div>
-            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column',}}>
+            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column', }}>
                 <div style={{ textAlign: 'center' }}>
                     <h1>Sunnybrook Soccer league</h1>
                 </div>
@@ -20,15 +20,26 @@ const SubmissionSuccessComponent = () => {
                     <h2>(Formerly St. Andrew Soccer Club)</h2>
                 </div>
             </div>
-            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column', padding: '5vw'}}>
+            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column', paddingBottom: '5vw', paddingTop: '2vw' }}>
                 <div style={{ textAlign: 'center' }}>
                     <h1>Your submission is successful!</h1>
                 </div>
+                <br/>
                 <div style={{ textAlign: 'center' }}>
-                    <h2>If you have not previously played, should your application be successful and we have room for new players, we will be in contact with you regarding payment of player fees - $230.</h2>
+                    <h3 style={{paddingLeft: '5vw', paddingRight: '5vw'}}>If you have played with Sunnybrook Soccer league before, e-transfer $230 to sunnybrook.soccer@gmail.com. You will not be
+                    placed on a team until we have received payment. Deadline
+                    for payment is February 21st, 2025</h3>
                 </div>
+                <br/>
                 <div style={{ textAlign: 'center' }}>
-                    <h2>Feel free to close the page now. Thank you again</h2>
+                    <h3 style={{paddingLeft: '5vw', paddingRight: '5vw'}}>If you have not previously played with Sunnybrook Soccer and
+                        should your application be successful and we have room for
+                        new players, we will be in contact with you in March/April
+                        regarding payment of player fees - $230.</h3>
+                </div>
+                <br/>
+                <div style={{ textAlign: 'center' }}>
+                    <h3>Feel free to close the page now. Thank you again</h3>
                 </div>
             </div>
             {/* <div style={{ paddingRight: '10vw', paddingLeft: '10vw', paddingTop: '5vh' }}>
